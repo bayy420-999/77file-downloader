@@ -1,0 +1,34 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "77file-downloader"
+version = "1.0.0"
+description = "Simple downloader for 77file.com website"
+readme = "README.md"
+authors = [{ name = "Bayu Ganteng", email ="getkilla5@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["feed", "reader", "tutorial"]
+dependencies = [
+    "aiohttp",
+    "cloudscraper",
+    "bs4"
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/bayy420-999/ssf-downloader"
+
+[project.scripts]
+realpython = "ssf_downloader.scripts.ssf_downloader:main"
